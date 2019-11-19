@@ -1,0 +1,39 @@
+<!--we create a function that loops through the sources_list-->
+{% macro displaySources(sources_list) %}
+
+     {% for source in sources_list%}
+     <div class="col-sm-6 col-md-3">
+    <button class="button" style="background-color:purple; padding:20px; text-align:center;font-size:15px; border-radius:12px; display: inline-block" ><a style="color:white;" href ="/article">{{source.name}}</a></button>
+  </div>
+  <br>
+     {% endfor %}
+    {% endmacro %}
+
+{% macro displayArticles(articles_list) %}
+    {% for article in articles_list%}
+
+
+  <div class="col-sm-6 col-md-3">
+    <div class="thumbnail">
+                  <a>
+                        <img src="{{article.urlToImage}}"  alt="">
+                    </a>
+
+                  <div class="caption">
+                      <h5 style="font-family: 'Raleway', sans-serif"class="card-title"><b>Article Title:</b>  {{article.title}}</h5>
+                      <p class="card-text" style="font-family: 'Raleway', sans-serif"><b>Description:</b> {{article.description}}</p>
+                      <pstyle="font-family: 'Raleway', sans-serif"><b>Published at:</b> {{article.publishedAt}}<p>
+                    <button class="button" style="background-color:purple; border-radius:12px; padding:10px;">  <a style="color:white;" href="{{article.url}}">Click here for more</a></button>
+
+
+
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+    {% endfor %}
+{% endmacro %}

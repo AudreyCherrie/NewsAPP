@@ -19,7 +19,7 @@ class Testcontact(unittest.TestCase):
             '''
             Contact.contact_list = []
 
-# other test cases here
+
     def test_save_multiple_contact(self):
             '''
             test_save_multiple_contact to check if we can save multiple contact
@@ -94,7 +94,10 @@ class Testcontact(unittest.TestCase):
         methodthat returns list of all saved contacts
         '''
 
-        self.assertEqual(Contact.display_contacts(),Contact.contact_list)
+        self.assertEqual(Contact.displa {l_name} created")
+                    print ('\n') {l_name} created")
+                    print ('\n') {l_name} created")
+                    print ('\n')y_contacts(),Contact.contact_list)
 
     def test_copy_email(self):
         '''

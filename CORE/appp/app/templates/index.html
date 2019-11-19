@@ -1,0 +1,90 @@
+{% import 'macros.html'as macro %}
+{% extends 'base.html'%}
+<div class="container">
+  {% block styles%}
+  {{ super() }}
+  <link rel ="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+  {% endblock %}
+  {% block content%}
+
+  <body>
+<!--Business sources-->
+<div class="container">
+<div class="jumbotron" style ="background-image:{{url_for('static',filename='images/news.jpg')}};"background="">
+  <h1 style="font-family: 'Raleway', sans-serif">Welcome to the News App</h1>
+  <p style="font-family: 'Raleway', sans-serif"> This is an application that allows you to view the latest
+  news from the source of your choice</p>
+</div>
+</div>
+<hr>
+<div class="container">
+<div class="jumbotron">
+<h3 style="font-family: 'Raleway', sans-serif; font-weight: bold"> General Sources </h3>
+<div class="row">
+  {{macro.displaySources(general)}}
+</div>
+</div>
+</div>
+
+
+<hr>
+<div class="container">
+  <div class="jumbotron">
+    <div class="row">
+<h3 style="font-family: 'Raleway', sans-serif; font-weight: bold"> Sports Sources</h3>
+
+  {{macro.displaySources(sports)}}
+</div>
+</div>
+</div>
+<hr>
+<div class="container">
+  <div class="jumbotron">
+    <div class="row">
+<h3 style="font-family: 'Raleway', sans-serif; font-weight: bold"> Entertainment Sources<h3>
+
+  {{macro.displaySources(entertainment)}}
+</div>
+</div>
+</div>
+
+<hr>
+<div class="container">
+  <div class="jumbotron">
+    <div class="row">
+
+<h3 style="font-family: 'Raleway', sans-serif; font-weight: bold">Business Sources</h3>
+
+  {{macro.displaySources(business)}}
+</div>
+</div>
+</div>
+<hr>
+<div class="container">
+  <div class="jumbotron">
+  <div class="row">
+<h3 style="font-family: 'Raleway', sans-serif; font-weight: bold"> Technology Sources</h3>
+
+  {{macro.displaySources(technology)}}
+</div>
+</div>
+</div>
+<hr>
+<div class="container">
+  <div class="jumbotron">
+    <div class="row">
+
+<h3 style="font-family: 'Raleway', sans-serif; font-weight: bold "> Health Sources</h3>
+
+  {{macro.displaySources(health)}}
+</div>
+</div>
+</div>
+
+
+
+</body>
+{% endblock %}
+</div>
